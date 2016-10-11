@@ -17,7 +17,7 @@ var gamePaused = false;
 var pauseButton = $('pauseButton')
 
 var obstacle = $('.obstacle');
-var speed = 10;
+var speed = 8;
 var score = -6;
 var level = 1;
 var playerName = $('#playerName');
@@ -54,9 +54,9 @@ var startGame = setInterval (function(){
         level++;
         levelBoard.text(level);
       } if (score < 35){
-        speed = randomizeObstacle(8,11);
+        speed = randomizeObstacle(7,10);
       } if (35 < score < 75){
-        speed = randomizeObstacle(11,15);
+        speed = randomizeObstacle(10,15);
       } if (score > 75){
         speed = randomizeObstacle(15,17);
       }
@@ -119,22 +119,22 @@ $(document).on('keydown', function(event){
 
   function moveLeft(){
     // console.log ('65 pressed');
-    parseInt(car.animate({'margin-left': '-=10'}, 40))
+    parseInt(car.animate({'margin-left': '-=10'}, 20))
   }
 
   function moveRight(){
     // console.log ('39 pressed');
-    parseInt(car.animate({'margin-left': '+=10'}, 40));
+    parseInt(car.animate({'margin-left': '+=10'}, 20));
   }
 
   function moveUp(){
     // console.log ('87 pressed');
-    parseInt(car.animate({'margin-bottom': '+=10'}, 40));
+    parseInt(car.animate({'margin-bottom': '+=10'}, 20));
   }
 
   function moveDown(){
     // console.log ('83 pressed');
-    parseInt(car.animate({'margin-bottom': '-=10'}, 40));
+    parseInt(car.animate({'margin-bottom': '-=10'}, 20));
     }
   })
 
