@@ -43,7 +43,7 @@ var startGame = setInterval (function(){
       var startPosition = randomizeObstacle(-300, -700);
       $(this).css('top', startPosition);
       $(this).css('margin', randomizeObstacle (25, 50));
-      $(this).css('right', randomizeObstacle(0, 500));
+      $(this).css('right', randomizeObstacle(0, 600));
       // levels, makes the game harder after the user has dodged a given number of obstacles
       if (score === 35){
         alert("Level Two Reached! Obstacles are Faster!")
